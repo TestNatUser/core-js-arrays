@@ -382,8 +382,7 @@ function getElementByIndices(arr, indexes) {
     ? arr[indexes]
     : indexes.reduce((acc, el, index) => {
         if (index === 1) {
-          // eslint-disable-next-line no-param-reassign
-          acc = arr[acc];
+          return arr[acc];
         }
         return acc[el];
       });
